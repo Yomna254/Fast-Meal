@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:talabat/utils/colors.dart';
+import 'package:talabat/utils/fonts.dart';
 
 class CategoryChip extends StatelessWidget {
   final String label;
@@ -12,20 +14,17 @@ class CategoryChip extends StatelessWidget {
       margin: EdgeInsets.symmetric(horizontal: 5, vertical: 8),
       padding: EdgeInsets.symmetric(horizontal: 20),
       decoration: BoxDecoration(
-        color: isSelected ? Color(0xFFE53935) : Color(0xFFFFEBEB),
+        color: isSelected ? AppColors.primaryRed : AppColors.backgroundLight,
         borderRadius: BorderRadius.circular(8),
         border: isSelected
-            ? Border.all(color: Color(0xFFE53935))
-            : Border.all(color: Colors.black),
+            ? Border.all(color: AppColors.primaryRed)
+            : Border.all(color: AppColors.black),
       ),
       child: Center(
         child: Text(
           label,
-          style: TextStyle(
-            color: isSelected ? Colors.white : Colors.black87,
-            fontWeight: FontWeight.w400,
-            fontSize: 12,
-            fontFamily: 'Alexandria',
+          style: AppStyles.captionGrey.copyWith(
+            color: isSelected ? AppColors.white : AppColors.black,
           ),
         ),
       ),

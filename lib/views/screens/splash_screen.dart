@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:talabat/screens/main_screen.dart';
+import 'package:talabat/utils/colors.dart';
+import 'package:talabat/utils/fonts.dart';
+import 'package:talabat/views/screens/main_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -13,7 +15,7 @@ class SplashScreen extends StatelessWidget {
           gradient: LinearGradient(
             begin: AlignmentGeometry.topCenter,
             end: AlignmentGeometry.bottomCenter,
-            colors: [Color(0XFFFF8F41), Color(0XFFE53935)],
+            colors: [AppColors.primaryOrange, AppColors.primaryRed],
           ),
         ),
         child: Padding(
@@ -25,7 +27,7 @@ class SplashScreen extends StatelessWidget {
                 'Delivary Home',
                 style: TextStyle(
                   fontSize: 28,
-                  color: Color(0xFFFFEBEB),
+                  color: AppColors.backgroundLight,
                   fontFamily: 'Fruitz',
                   //fontFamily: 'Pacifico',
                 ),
@@ -41,12 +43,7 @@ class SplashScreen extends StatelessWidget {
                 child: Text(
                   'و أنت قاعد ببيتك وجبتك المفضلة بتجي لعندك ماعليك إلا تختار الوجبة عندك على ديلفري هوم.',
                   textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Color(0xFFFFEBEB),
-                    fontSize: 18,
-                    fontWeight: FontWeight.w700,
-                    fontFamily: 'Alexandria',
-                  ),
+                  style: AppStyles.splashText,
                 ),
               ),
               SizedBox(height: 30),
@@ -60,8 +57,8 @@ class SplashScreen extends StatelessWidget {
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFFFFEBEB),
-                    foregroundColor: Colors.blueGrey,
+                    backgroundColor: AppColors.backgroundLight,
+                    foregroundColor: AppColors.textGrey,
                     minimumSize: Size(double.infinity, 50),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16),
@@ -72,10 +69,8 @@ class SplashScreen extends StatelessWidget {
                     children: [
                       Text(
                         'اطلب الآن',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Alexandria',
+                        style: AppStyles.bodyBoldWhite.copyWith(
+                          color: AppColors.textGrey,
                         ),
                       ),
                       Icon(

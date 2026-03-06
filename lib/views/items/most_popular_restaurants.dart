@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:talabat/utils/colors.dart';
+import 'package:talabat/utils/fonts.dart';
 
-class ResturantCard extends StatelessWidget {
+class MostPopularRestaurants extends StatelessWidget {
   final String title;
   final String subTitle;
   final String image;
-  const ResturantCard({
+  const MostPopularRestaurants({
     super.key,
     required this.image,
     required this.title,
@@ -16,13 +18,12 @@ class ResturantCard extends StatelessWidget {
     return Container(
       width: 236,
       decoration: BoxDecoration(
-        color: const Color(0xFFECE8E6),
+        color: AppColors.containerGrey,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          /// الصورة
           ClipRRect(
             borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
             child: Image.asset(
@@ -38,11 +39,8 @@ class ResturantCard extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Text(
               title,
-              style: TextStyle(
-                color: Color(0xFF08741F),
-                fontSize: 20,
-                fontFamily: 'Alexandria',
-                fontWeight: FontWeight.bold,
+              style: AppStyles.sectionHeader.copyWith(
+                color: AppColors.successGreen,
               ),
             ),
           ),
@@ -51,11 +49,8 @@ class ResturantCard extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Text(
               subTitle,
-              style: TextStyle(
-                color: Colors.grey,
-                fontSize: 14,
-                fontFamily: 'Alexandria',
-                fontWeight: FontWeight.w400,
+              style: AppStyles.buttonTextStyle.copyWith(
+                color: AppColors.textGrey,
               ),
             ),
           ),
