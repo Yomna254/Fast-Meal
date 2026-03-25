@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:talabat/utils/colors.dart';
 import 'package:talabat/utils/fonts.dart';
 
@@ -17,13 +18,15 @@ class DetailsButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 35,
+      height: 35.h,
       child: OutlinedButton(
         onPressed: onPressed,
         style: OutlinedButton.styleFrom(
           backgroundColor: Colors.transparent,
           side: BorderSide(color: AppColors.grey),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8.r),
+          ),
         ),
         child: Row(
           //textDirection: TextDirection.rtl,
@@ -33,7 +36,7 @@ class DetailsButton extends StatelessWidget {
               style: AppStyles.captionGrey.copyWith(color: Colors.black),
             ),
             Spacer(),
-            Icon(icon, size: 16, color: AppColors.grey),
+            Icon(icon, size: 16.sp, color: AppColors.grey),
           ],
         ),
       ),

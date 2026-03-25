@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:talabat/utils/colors.dart';
 import 'package:talabat/utils/fonts.dart';
-import 'package:talabat/views/items/order_button.dart';
+import 'package:talabat/views/widgets/order_button.dart';
 
 class Meals extends StatelessWidget {
   final String name;
@@ -12,12 +13,12 @@ class Meals extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(5.0),
+      padding: EdgeInsets.all(5.0.sp),
       child: Container(
         //padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 12),
         decoration: BoxDecoration(
           color: AppColors.backgroundLight,
-          borderRadius: BorderRadius.circular(22),
+          borderRadius: BorderRadius.circular(22.r),
           border: Border.all(color: AppColors.grey, width: 0.5),
           boxShadow: [
             BoxShadow(
@@ -32,31 +33,31 @@ class Meals extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ClipRRect(
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(16.r),
               child: Image.asset(
                 image,
-                height: 100,
-                width: 100,
+                height: 100.h,
+                width: 100.w,
                 fit: BoxFit.cover,
               ),
             ),
 
-            const SizedBox(height: 12),
+            SizedBox(height: 12.h),
 
             Text(
               name,
               textAlign: TextAlign.center,
-              style: AppStyles.captionGrey.copyWith(fontSize: 16),
+              style: AppStyles.captionGrey.copyWith(fontSize: 16.sp),
             ),
 
-            const SizedBox(height: 14),
+            SizedBox(height: 14.h),
 
             Padding(
-              padding: const EdgeInsets.only(
-                top: 8.0,
-                bottom: 8,
-                right: 13,
-                left: 13,
+              padding: EdgeInsets.only(
+                top: 8.0.h,
+                bottom: 8.h,
+                right: 13.w,
+                left: 13.w,
               ),
               child: OrderButton(
                 text: "اطلب الآن",

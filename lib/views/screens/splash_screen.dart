@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:talabat/utils/colors.dart';
 import 'package:talabat/utils/fonts.dart';
 import 'package:talabat/views/screens/main_screen.dart';
@@ -9,7 +10,6 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Color(0xFFFF5722),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -19,36 +19,35 @@ class SplashScreen extends StatelessWidget {
           ),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(16.0.sp),
           child: Column(
             children: [
-              SizedBox(height: 50),
+              SizedBox(height: 50.h),
               Text(
                 'Delivary Home',
                 style: TextStyle(
-                  fontSize: 28,
+                  fontSize: 28.sp,
                   color: AppColors.backgroundLight,
                   fontFamily: 'Fruitz',
-                  //fontFamily: 'Pacifico',
                 ),
               ),
               Spacer(),
               Image.asset(
                 'assets/images/Person on scooter delivering pizza.png',
-                height: 332,
+                height: 332.h,
               ),
               Spacer(),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 30),
+                padding: EdgeInsets.symmetric(horizontal: 30.w),
                 child: Text(
                   'و أنت قاعد ببيتك وجبتك المفضلة بتجي لعندك ماعليك إلا تختار الوجبة عندك على ديلفري هوم.',
                   textAlign: TextAlign.center,
                   style: AppStyles.splashText,
                 ),
               ),
-              SizedBox(height: 30),
+              SizedBox(height: 30.h),
               Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: EdgeInsets.all(20.0.sp),
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -59,9 +58,9 @@ class SplashScreen extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.backgroundLight,
                     foregroundColor: AppColors.textGrey,
-                    minimumSize: Size(double.infinity, 50),
+                    minimumSize: Size(double.infinity, 50.sp),
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
+                      borderRadius: BorderRadius.circular(16.r),
                     ),
                   ),
                   child: Row(
@@ -75,7 +74,7 @@ class SplashScreen extends StatelessWidget {
                       ),
                       Icon(
                         Icons.arrow_forward_ios_rounded,
-                        size: 24,
+                        size: 24.sp,
                         fontWeight: FontWeight.bold,
                       ),
                     ],

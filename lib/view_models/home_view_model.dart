@@ -15,5 +15,12 @@ class HomeViewModel {
     {'name': 'سمك بحري', 'image': 'assets/images/fish.jpg'},
   ];
 
-  // مستقبلاً هنا هيكون فيه دالة fetchDataFromApi()
+  final List<String> searchScreenCategories = [
+    'الكل',
+    'مناقيش',
+    'محلات حلويات',
+    'مطاعم',
+    'محلات باتيسري',
+    'سوبر ماركت',
+  ];
 }

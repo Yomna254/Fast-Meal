@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:talabat/utils/colors.dart';
 import 'package:talabat/utils/fonts.dart';
 
@@ -17,12 +18,14 @@ class OrderButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 35,
+      height: 35.h,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: AppColors.primaryRed,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8.r),
+          ),
           elevation: 0,
         ),
         child: Row(
@@ -34,7 +37,7 @@ class OrderButton extends StatelessWidget {
               ),
             ),
             const Spacer(),
-            Icon(icon, size: 16, color: AppColors.white),
+            Icon(icon, size: 16.sp, color: AppColors.white),
           ],
         ),
       ),

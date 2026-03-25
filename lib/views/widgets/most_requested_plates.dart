@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:talabat/utils/colors.dart';
 import 'package:talabat/utils/fonts.dart';
-import 'package:talabat/views/items/details_button.dart';
-import 'package:talabat/views/items/order_button.dart';
+import 'package:talabat/views/widgets/details_button.dart';
+import 'package:talabat/views/widgets/order_button.dart';
 
 class MostRequestedPlates extends StatelessWidget {
   const MostRequestedPlates({super.key});
@@ -12,26 +13,28 @@ class MostRequestedPlates extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: AppColors.backgroundLight,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(20.r),
         border: Border.all(color: Colors.grey.shade300),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          ClipRRect(
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
-            child: Image.asset(
-              'assets/images/salad.jpg',
-              height: 140,
-              width: double.infinity,
-              fit: BoxFit.cover,
+          Expanded(
+            child: ClipRRect(
+              borderRadius: BorderRadius.vertical(top: Radius.circular(20.r)),
+              child: Image.asset(
+                'assets/images/salad.jpg',
+                height: 140.h,
+                width: double.infinity,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
 
-          const SizedBox(height: 10),
+          SizedBox(height: 10.h),
 
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 12),
+            padding: EdgeInsets.symmetric(horizontal: 12.w),
             child: Row(
               textDirection: TextDirection.rtl,
               children: [
@@ -42,20 +45,20 @@ class MostRequestedPlates extends StatelessWidget {
                 Spacer(),
                 Text(
                   'السعر',
-                  style: AppStyles.captionGreen.copyWith(fontSize: 12),
+                  style: AppStyles.captionGreen.copyWith(fontSize: 12.sp),
                 ),
               ],
             ),
           ),
 
-          const SizedBox(height: 12),
+          SizedBox(height: 12.h),
 
           Padding(
-            padding: const EdgeInsets.only(
-              top: 8.0,
-              bottom: 8,
-              right: 13,
-              left: 13,
+            padding: EdgeInsets.only(
+              top: 8.0.h,
+              bottom: 8.h,
+              right: 13.w,
+              left: 13.w,
             ),
             child: OrderButton(
               text: "اطلب الآن",
@@ -67,11 +70,11 @@ class MostRequestedPlates extends StatelessWidget {
           // const SizedBox(height: 8),
           //  const SizedBox(height: 12),
           Padding(
-            padding: const EdgeInsets.only(
+            padding: EdgeInsets.only(
               // top: 8.0,
-              bottom: 8,
-              right: 13,
-              left: 13,
+              bottom: 8.h,
+              right: 13.w,
+              left: 13.w,
             ),
             child: DetailsButton(
               text: "التفاصيل",

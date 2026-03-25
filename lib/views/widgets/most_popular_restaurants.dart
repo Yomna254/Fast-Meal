@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:talabat/utils/colors.dart';
 import 'package:talabat/utils/fonts.dart';
 
@@ -16,27 +17,27 @@ class MostPopularRestaurants extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 236,
+      width: 236.w,
       decoration: BoxDecoration(
         color: AppColors.containerGrey,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(20.r),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           ClipRRect(
-            borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+            borderRadius: BorderRadius.vertical(top: Radius.circular(20.r)),
             child: Image.asset(
               image,
-              height: 140,
+              height: 140.h,
               width: double.infinity,
               fit: BoxFit.cover, // مهم جداً
             ),
           ),
 
-          SizedBox(height: 10),
+          SizedBox(height: 10.h),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(8.0.sp),
             child: Text(
               title,
               style: AppStyles.sectionHeader.copyWith(
@@ -44,9 +45,9 @@ class MostPopularRestaurants extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 10.h),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(8.0.sp),
             child: Text(
               subTitle,
               style: AppStyles.buttonTextStyle.copyWith(
@@ -54,7 +55,7 @@ class MostPopularRestaurants extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 10),
+          SizedBox(height: 10.h),
         ],
       ),
     );

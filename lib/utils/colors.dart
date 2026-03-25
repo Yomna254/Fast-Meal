@@ -11,6 +11,6 @@ class AppColors {
   static const Color textGrey = Color(0xFF757575); // لون العناوين الجانبية
   static Color white = Colors.white;
   static Color black = Colors.black;
-  static Color amber = Colors.amber;
   static Color grey = Colors.grey;
+  static Color amber = Color(0xFFFFC107);
 }
